@@ -1,4 +1,6 @@
-# Super Studio : Claude, réglé pour vendre et créer du contenu
+# Builder Cards : tire 5 cartes, Claude écrit ton script
+
+Tu as tiré tes 5 cartes Builder Cards (Hook, Format, Concept, Émotion, CTA) ? Dis-les à Claude : il écrit ton script de reel, prêt à dire, avec les règles de chaque carte. Pas de deck sous la main ? « Tire-moi 5 cartes » : il tire au hasard ou prend un Build gagnant.
 
 Un seul lien installe tout : ta mémoire (le Brain, déjà remplie de fiches d'experts), ton master prompt, une équipe d'agents et 26 outils pour démarrer, créer ton contenu et vendre.
 Tout tourne sur ton Mac, avec ton abonnement Claude. Tu parles à Claude dans le chat : il n'y a aucune appli à ouvrir.
@@ -15,7 +17,7 @@ Tout tourne sur ton Mac, avec ton abonnement Claude. Tu parles à Claude dans le
 1. Ouvre l'app Claude sur ton Mac, onglet **Code**.
 2. Colle cette phrase :
 
-   > Installe Super Studio qui est ici : https://github.com/MrDreamax/superstudio
+   > Installe Builder Cards qui est ici : https://github.com/MrDreamax/buildercards
 
 3. Clique « Autoriser » quand Claude le demande. À la fin, Claude lance « Bienvenue » (3 minutes de questions) et ouvre ton guide.
 
@@ -23,7 +25,7 @@ Ton guide pas à pas (chaque outil, la phrase à dire, ce que ça donne) : `Docu
 
 ## Les 26 outils
 - **Démarrer** : Bienvenue, Import ChatGPT, Logiciels, Positionneur
-- **Contenu** : Scripteur, Monteur (avec Style Lab et Cut Notes), Carrousel, Publieur (Blotato), Stratège, Slides, Audit Insta
+- **Contenu** : Scripteur (avec le script par cartes Builder Cards), Monteur (avec Style Lab et Cut Notes), Carrousel, Publieur (Blotato), Stratège, Slides, Audit Insta
 - **Vendre** : Offre, Copywriter, Funnel builder, Page produit, Usine à pubs, Pilote pub, Setter, Closer, Messagerie, Relanceur, Suivi client, Préparateur coaching
 - **Équipe** : Team (13 agents qui débattent), Tuto vers agent, Audit des croyances
 - **En coulisse** : Ma marque, Anti-IA, Design Apple, Le Limier et Le Stagiaire (agents)
@@ -31,14 +33,14 @@ Ton guide pas à pas (chaque outil, la phrase à dire, ce que ça donne) : `Docu
 Règle de base : Claude prépare, toi tu décides. Rien n'est envoyé, publié ou payé sans ton OK. **Publication en mode essai** tant que tu ne l'actives pas toi-même.
 
 ## Pour Claude (installation)
-1. `git clone https://github.com/MrDreamax/superstudio ~/Documents/superstudio` (ou `git -C ~/Documents/superstudio pull` s'il existe déjà).
-2. `bash ~/Documents/superstudio/install.sh` (relançable : c'est aussi la mise à jour ; le profil du master prompt, le Brain perso, les réglages, la DA, les reels et les carrousels de la personne ne sont jamais écrasés, rien n'est supprimé chez elle, l'ancienne version est sauvegardée dans `~/.claude/backups/`).
+1. `git clone https://github.com/MrDreamax/buildercards ~/Documents/buildercards` (ou `git -C ~/Documents/buildercards pull` s'il existe déjà).
+2. `bash ~/Documents/buildercards/install.sh` (relançable : c'est aussi la mise à jour ; le profil du master prompt, le Brain perso, les réglages, la DA, les reels et les carrousels de la personne ne sont jamais écrasés, rien n'est supprimé chez elle, l'ancienne version est sauvegardée dans `~/.claude/backups/`).
 3. Demande son prénom (bouton) et écris-le dans `~/Documents/SuperApps/config.json` → `"nom"`.
 4. Le Monteur appelle Claude tout seul : vérifie `claude auth status`. Pas connecté = double-clic sur `~/Documents/SuperApps/superda/connecter-claude.command`.
 5. Lance le skill `bienvenue` (~/.claude/skills/bienvenue/SKILL.md) : il remplit le profil et ouvre le guide à la fin.
 6. Ne mets jamais `"mode_essai": false` toi-même : c'est à la personne de le faire.
-7. Musiques : si install.sh affiche `MUSIQUES_MANQUANTES`, Bienvenue (étape 6 ter) demande le fichier et lance `bash ~/Documents/superstudio/ranger-musiques.command`. À tout moment : « Range mes musiques ».
-8. « Range ma clé ElevenLabs » : la clé est dans son presse-papier, lance `bash ~/Documents/superstudio/ranger-cle-elevenlabs.command` (jamais la clé dans le chat).
+7. Musiques : si install.sh affiche `MUSIQUES_MANQUANTES`, Bienvenue (étape 6 ter) demande le fichier et lance `bash ~/Documents/buildercards/ranger-musiques.command`. À tout moment : « Range mes musiques ».
+8. « Range ma clé ElevenLabs » : la clé est dans son presse-papier, lance `bash ~/Documents/buildercards/ranger-cle-elevenlabs.command` (jamais la clé dans le chat).
 
 Ce qui est installé : `~/.claude/CLAUDE.md` (master prompt), `~/.claude/agents/` (15 agents), `~/.claude/skills/` (29 skills, dont 3 en coulisse), les moteurs du Monteur et du Carrousel dans `~/Documents/SuperApps/`, le Brain dans `~/Documents/Brain/`.
 

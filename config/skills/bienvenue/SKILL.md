@@ -10,7 +10,7 @@ Ton but : qu'à la fin, Claude parle à cette personne comme un assistant qui la
 ## 1. Dire bonjour (2 lignes max)
 « Le kit est installé. Quelques questions pour m'adapter à toi, ensuite tu n'auras plus jamais à te présenter. »
 
-Si `~/.claude/superstudio.txt` (ou l'ancien `~/.claude/kit-claude.txt`) existe et qu'un ancien CLAUDE.md a été sauvegardé (chemin dans `~/.claude/backups/superstudio-*/.claude/CLAUDE.md` ou `~/.claude/backups/kit-*/.claude/CLAUDE.md`) : lis-le, garde ses préférences utiles pour l'étape 3, et dis-le en une ligne.
+Si `~/.claude/buildercards.txt` (ou `~/.claude/superstudio.txt`, ou l'ancien `~/.claude/kit-claude.txt`) existe et qu'un ancien CLAUDE.md a été sauvegardé (chemin dans `~/.claude/backups/buildercards-*/.claude/CLAUDE.md`, `~/.claude/backups/superstudio-*/.claude/CLAUDE.md` ou `~/.claude/backups/kit-*/.claude/CLAUDE.md`) : lis-le, garde ses préférences utiles pour l'étape 3, et dis-le en une ligne.
 
 Puis AskUserQuestion, une question : « Comment tu veux répondre ? »
 - **Tout sur une page (Recommandé)** : une page s'ouvre, tu cliques, tu écris 6 phrases, tu copies, tu colles ici. 15 minutes.
@@ -71,9 +71,9 @@ Plus tard : « Quand tu veux, écris : range ma clé ElevenLabs. » (même déro
 
 ### 6 ter. Les musiques (toujours, même sans « Créer du contenu » : le Monteur en a besoin)
 Si `find ~/Documents/Montage/MUSIQUE -iname '*.mp3' -print -quit` répond déjà un fichier : saute cette étape. Sinon, une action à la fois :
-1. Essaie d'abord tout seul : `bash ~/Documents/superstudio/ranger-musiques.command` (il cherche dans Téléchargements et sur le Bureau). Réponse `OK` : dis en 1 ligne « Tes musiques sont rangées, le Monteur s'en sert tout seul. » et passe à la suite.
+1. Essaie d'abord tout seul : `bash ~/Documents/buildercards/ranger-musiques.command` (il cherche dans Téléchargements et sur le Bureau). Réponse `OK` : dis en 1 ligne « Tes musiques sont rangées, le Monteur s'en sert tout seul. » et passe à la suite.
 2. Réponse `PAS_TROUVE` : « Pour tes vidéos, il me faut le fichier des musiques. Ouvre le lien Google Drive que tu as reçu avec le kit, clique sur Télécharger (en haut à droite), attends la fin, puis écris "téléchargé". » Boutons : Téléchargé · Je n'ai pas le lien · Plus tard.
-3. À « téléchargé » : relance le script. Toujours `PAS_TROUVE` : demande-lui de glisser le fichier dans le chat (ou d'écrire où il est), puis `bash ~/Documents/superstudio/ranger-musiques.command "<chemin>"`. Plusieurs zips (Drive coupe les gros dossiers en -001, -002…) : le script les prend tous.
+3. À « téléchargé » : relance le script. Toujours `PAS_TROUVE` : demande-lui de glisser le fichier dans le chat (ou d'écrire où il est), puis `bash ~/Documents/buildercards/ranger-musiques.command "<chemin>"`. Plusieurs zips (Drive coupe les gros dossiers en -001, -002…) : le script les prend tous.
 4. « Je n'ai pas le lien » : « Demande le lien des musiques à la personne qui t'a donné le kit. Quand tu l'as : range mes musiques. » Ne cherche jamais de musique sur Internet à sa place.
 Ne supprime jamais le zip de Téléchargements toi-même.
 

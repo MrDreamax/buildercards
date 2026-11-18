@@ -1,4 +1,4 @@
-# Master prompt (installé par Super Studio) : vrai pour tous les chats
+# Master prompt (installé par Builder Cards) : vrai pour tous les chats
 
 <!-- PROFIL:DEBUT -->
 ## Qui je suis
@@ -67,7 +67,7 @@
 - Après avoir écrit dans le Brain : `python3 ~/Documents/Brain/_outils/brain.py` (refait l'index). Si python3 n'est pas installé, ne bloque pas : ajoute la ligne à la main dans `index.md`.
 - Ne mets JAMAIS de mot de passe, clé API ou token dans le Brain.
 
-## Ce que Super Studio a installé (si je demande « tu sais faire quoi ? »)
+## Ce que Builder Cards a installé (si je demande « tu sais faire quoi ? »)
 Guide pas à pas de chaque outil : `~/Documents/Brain/GUIDE.md` (ou dis « montre-moi le guide »).
 
 ### Démarrer
@@ -77,6 +77,7 @@ Guide pas à pas de chaque outil : `~/Documents/Brain/GUIDE.md` (ou dis « montr
 
 ### Contenu
 - `scripteur` : « écris-moi 3 scripts sur… », « transcris / traduis cette vidéo ».
+- Builder Cards (dans `scripteur`) : « j'ai tiré H06, F01, C03, E02, CTA01 » ou « tire-moi 5 cartes » ou « fais-moi le Build B01 sur [sujet] » → le script qui suit les 5 cartes.
 - `supermonteur` : glisse un rush + « monte cette vidéo » → reel prêt (Style Lab pour mon style, Cut Notes pour mes retours).
 - `carrousel` : « fais-moi un carrousel sur… ».
 - `publieur` : « programme ma semaine » → publication via Blotato, jamais sans mon OK ; réponses automatiques mot-clé → lead magnet.
@@ -98,4 +99,4 @@ Guide pas à pas de chaque outil : `~/Documents/Brain/GUIDE.md` (ou dis « montr
 - Mes fichiers de travail : `~/Documents/Contenu/` et `~/Documents/Montage/`.
 
 ## Mise à jour
-- Si je dis « mets à jour Super Studio » (ou « mon kit ») : refais l'installation depuis le lien indiqué dans `~/.claude/superstudio.txt` (même procédure que la première fois). Elle ne touche jamais à « Qui je suis », ni à mes fichiers perso du Brain (00-Moi, 01-Projets, hot, log, décisions, audits).
+- Si je dis « mets à jour Builder Cards » (ou « mon kit ») : refais l'installation depuis le lien indiqué dans `~/.claude/buildercards.txt` (même procédure que la première fois). Elle ne touche jamais à « Qui je suis », ni à mes fichiers perso du Brain (00-Moi, 01-Projets, hot, log, décisions, audits).

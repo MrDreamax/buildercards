@@ -1,10 +1,10 @@
 ---
-description: "Guide pas à pas de Super Studio : chaque outil, la phrase à dire, ce que ça donne. À montrer quand on demande « montre-moi le guide »."
+description: "Guide pas à pas de Builder Cards : chaque outil, la phrase à dire, ce que ça donne. À montrer quand on demande « montre-moi le guide »."
 type: sop
 statut: actif
 sujets: [outils]
 ---
-# Ton guide Super Studio
+# Ton guide Builder Cards
 
 Tu parles à Claude dans le chat, comme à un assistant. Tu n'as rien à ouvrir, rien à cliquer.
 Pour chaque outil : **c'est quoi**, **la phrase à dire**, **ce que ça te donne**.
@@ -44,6 +44,11 @@ Règle de base : Claude prépare, toi tu décides. Rien n'est envoyé, publié o
 - **C'est quoi** : il écrit ce que tu vas dire face caméra, mot à mot.
 - **Les phrases** : « Écris-moi 3 scripts sur [ton sujet] » · « Transcris cette vidéo » + un lien · « Reprends cette vidéo pour ma niche » + un lien
 - **Ça te donne** : des scripts prêts à lire, qui sonnent comme toi.
+
+### Le script par cartes (Builder Cards)
+- **C'est quoi** : tu tires 5 cartes de ton deck (Hook, Format, Concept, Émotion, CTA), Claude écrit le script qui respecte les 5.
+- **Les phrases** : « J'ai tiré H06, F01, C03, E02, CTA01, sujet : [ton sujet] » (les noms des cartes marchent aussi) · « Tire-moi 5 cartes » · « Fais-moi le Build B01 sur [ton sujet] » · « C'est quoi la carte H07 ? »
+- **Ça te donne** : un script prêt à dire, plus comment le filmer (la carte Format) et la phrase de fin (la carte CTA).
 
 ### Le Monteur
 - **C'est quoi** : il monte ta vidéo brute en reel prêt à poster (coupes, sous-titres, musique).
@@ -201,4 +206,4 @@ Ce qu'on utilise, et à quoi ça sert. Claude t'aide à tout installer : dis « 
 ## Si tu bloques
 - Dis simplement ce que tu veux faire : Claude choisit le bon outil.
 - « Montre-moi le guide » : ce guide revient.
-- « Mets à jour Super Studio » : tu reçois la dernière version, sans rien perdre.
+- « Mets à jour Builder Cards » : tu reçois la dernière version, sans rien perdre.

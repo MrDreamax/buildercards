@@ -331,7 +331,7 @@ function vuePublier(p) {
   dessinerSlides();
   $("pret-sous").textContent = p.slides.length + " slides · 1080 × 1440";
   $("nb-img").textContent = p.slides.length;
-  // publication retirée de l'appli (Super Studio 2.0) : on publie dans le chat avec Claude (skill publieur, Blotato)
+  // publication retirée de l'appli (Builder Cards 2.0) : on publie dans le chat avec Claude (skill publieur, Blotato)
   $("pub-dl-seul").hidden = false;
 }
 

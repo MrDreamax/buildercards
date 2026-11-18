@@ -12,7 +12,7 @@ Ne réécrit pas le moteur : tout passe par le skill `~/.claude/skills/supermont
 2. **Montage v1 automatique** (`monter.py monter` puis `suite`) : dernière prise gardée (phrase reprise = l'ancienne saute), dérush, titre = 1re phrase, musique de REELS INSTA (jamais utilisée d'abord, temps fort par `attaque.py`), DA de SuperDA (`apps/superda/da.json` traduite par `da.py`), puis `express.py` si le plan n'a qu'un titre + des sous-titres (~1 min, sans rendu Chrome), sinon `monte.sh` (Gardien avant + après rendu dans les deux cas). Un seul rendu à la fois sur le Mac.
    La v1 auto est une base : mots forts, cartons, animations, fixes de transcription = Claude, au 1er tour de retours.
 3. **Écran 1 « Tes retours »** : chaque retour s'accroche à l'image (`reels/<id>/retours.json`). « Suivant : corrige mes retours » écrit `reels/<id>/demande.json` et la boîte `a-corriger.json`.
-4. **Écran 3 « Publier »** : retiré de l'appli (Super Studio 2.0). Un seul bouton Télécharger (zip : vidéo + `legendes.txt`). Pour publier : dans le chat, « Publie ce reel » (skill publieur, Blotato).
+4. **Écran 3 « Publier »** : retiré de l'appli (Builder Cards 2.0). Un seul bouton Télécharger (zip : vidéo + `legendes.txt`). Pour publier : dans le chat, « Publie ce reel » (skill publieur, Blotato).
 
 ## Reels d'essai : SUPPRIMÉS
 . Plus de repérage du mot « essai », plus de 2e hook, plus de TRIAL_REEL. Ne pas le remettre.

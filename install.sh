@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Super Studio : installe (ou met à jour) TOUT en une fois :
+# Builder Cards : installe (ou met à jour) TOUT en une fois :
 #   1. le master prompt (~/.claude/CLAUDE.md), 2. les agents, 3. les skills, 4. le Brain (mémoire + fiches d'experts),
 #   5. les moteurs du Monteur et du Carrousel (~/Documents/SuperApps), les musiques, les outils.
 # Usage : bash install.sh   (depuis le dossier téléchargé). Relançable sans risque : c'est aussi la mise à jour.
@@ -12,15 +12,15 @@
 #   - applis : config.json, superda/da.json + img/ + historique/, reels/, projets/, journaux
 #   - ~/Documents/Montage et ~/Documents/Contenu
 # Rien n'est supprimé chez la personne : un outil d'une ancienne version reste là. Tout fichier remplacé est
-# d'abord sauvegardé dans ~/.claude/backups/superstudio-<date>/.
+# d'abord sauvegardé dans ~/.claude/backups/buildercards-<date>/.
 set -euo pipefail
 
 ICI="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CL="$HOME/.claude"
 BR="$HOME/Documents/Brain"
 TS="$(date +%Y%m%d-%H%M%S)"
-BK="$CL/backups/superstudio-$TS"
-URL="https://github.com/MrDreamax/superstudio"
+BK="$CL/backups/buildercards-$TS"
+URL="https://github.com/MrDreamax/buildercards"
 mkdir -p "$CL/agents" "$CL/skills" "$BR"
 backup() { local rel="${1#"$HOME"/}"; mkdir -p "$BK/$(dirname "$rel")"; cp -R "$1" "$BK/$rel"; }
 
@@ -36,7 +36,7 @@ if [[ -f "$DEST" ]] && grep -q '<!-- PROFIL:DEBUT -->' "$DEST"; then
 elif [[ -f "$DEST" ]]; then
   # CLAUDE.md perso sans balises : rien n'est perdu, il est gardé EN ENTIER dans « Qui je suis » (et sauvegardé).
   backup "$DEST"; OLD="$(mktemp)"; OUT="$(mktemp)"
-  { echo "<!-- PROFIL:DEBUT -->"; echo "## Qui je suis (mes consignes d'avant Super Studio, gardées telles quelles)"; cat "$DEST"; echo; echo "<!-- PROFIL:FIN -->"; } > "$OLD"
+  { echo "<!-- PROFIL:DEBUT -->"; echo "## Qui je suis (mes consignes d'avant Builder Cards, gardées telles quelles)"; cat "$DEST"; echo; echo "<!-- PROFIL:FIN -->"; } > "$OLD"
   awk -v bf="$OLD" '/<!-- PROFIL:DEBUT -->/ { while ((getline l < bf) > 0) print l; skip=1; next }
     /<!-- PROFIL:FIN -->/ { skip=0; next } !skip { print }' "$NEW" > "$OUT"
   cp "$OUT" "$DEST"; rm -f "$OLD" "$OUT"
@@ -82,7 +82,7 @@ for f in README.md GUIDE.md GUIDE.html; do [[ -f "$ICI/Brain/$f" ]] || continue;
   done )
 mkdir -p "$HOME/Documents/Contenu/medias/rushes" "$HOME/Documents/Contenu/medias/photos"
 echo "Brain prêt dans $BR ($(find "$BR" -name '*.md' | wc -l | tr -d ' ') fiches). Guide : $BR/GUIDE.html"
-{ echo "Super Studio installé le $(date '+%d/%m/%Y %H:%M')"; echo "Lien (pour « mets à jour Super Studio ») : $URL"; echo "Brain : $BR"; } > "$CL/superstudio.txt"
+{ echo "Builder Cards installé le $(date '+%d/%m/%Y %H:%M')"; echo "Lien (pour « mets à jour Builder Cards ») : $URL"; echo "Brain : $BR"; } > "$CL/buildercards.txt"
 
 # ---------- 5. Monteur, Publieur, Carrousel, Scripteur et leurs moteurs ----------
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/supermonteur"
@@ -222,7 +222,7 @@ if [[ -n "$(find "$HOME/Documents/Montage/MUSIQUE" -iname '*.mp3' -print -quit 2
 else echo "MUSIQUES_MANQUANTES : Claude va te demander le fichier des musiques (lien reçu à part)."; fi
 # ElevenLabs obligatoire (transcription des rushs)
 security find-generic-password -s elevenlabs-api-key -w >/dev/null 2>&1 || echo "Clé ElevenLabs (sous-titres sans faute) : Claude te guide pendant « Bienvenue », ou écris « Range ma clé ElevenLabs »."
-echo "Super Studio installé (version $(cat "$ICI/VERSION"))."
+echo "Builder Cards installé (version $(cat "$ICI/VERSION"))."
 [[ -d "$BK" ]] && echo "Sauvegarde des anciens fichiers : $BK"
 echo "Publication en mode essai : rien ne part tant que tu ne l'actives pas."
 B="$(dirname "$SRC")/BIENVENUE.md"; [[ -f "$B" ]] && { echo; cat "$B"; }

@@ -393,7 +393,7 @@ async function ecranPublier() {
   if (vid2.dataset.f !== der.fichier) { vid2.dataset.f = der.fichier; vid2.src = `/media/${rid}/${der.fichier}`; }
   $("#pret-titre").textContent = "Ton reel est prêt ✓";
   $("#pret-info").textContent = `${tc(der.duree)} · 1080 × 1920`;
-  // publication retirée de l'appli (Super Studio 2.0) : on publie dans le chat avec Claude (skill publieur, Blotato)
+  // publication retirée de l'appli (Builder Cards 2.0) : on publie dans le chat avec Claude (skill publieur, Blotato)
   $("#pub-side").innerHTML = `<h2>Télécharger</h2><p class="gris">Pour publier sur tes réseaux, dis à Claude « Publie ce reel » ou « Programme ma semaine ». Ou télécharge la vidéo + ses légendes et poste toi-même.</p>
     <div class="end"><a class="now" href="/api/telecharger/${rid}" download>Télécharger</a></div>`;
 }

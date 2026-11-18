@@ -1,11 +1,11 @@
 ---
 name: scripteur
-description: Le Scripteur. Écrit les scripts de reels de l'utilisateur (à dire face caméra, mot à mot), transcrit une vidéo mot pour mot (fichier ou lien Instagram, TikTok, YouTube) et la traduit. Ne publie rien. Use when "script", "écris-moi un script", "scripts", "3 scripts sur", "hook", "accroche", "transcris", "transcription", "retranscris", "traduis", "traduction", "mot pour mot", "reprends cette vidéo", "reprends ce reel", "scripteur", un lien de vidéo collé avec une demande de texte.
+description: Le Scripteur. Écrit les scripts de reels de l'utilisateur (à dire face caméra, mot à mot), transcrit une vidéo mot pour mot (fichier ou lien Instagram, TikTok, YouTube) et la traduit. Ne publie rien. Use when "script", "écris-moi un script", "scripts", "3 scripts sur", "hook", "accroche", "transcris", "transcription", "retranscris", "traduis", "traduction", "mot pour mot", "reprends cette vidéo", "reprends ce reel", "scripteur", un lien de vidéo collé avec une demande de texte, "Builder Cards", "cartes", "j'ai tiré", "tire-moi 5 cartes", "tirage", "build", "B01" à "B10", des codes de cartes (H06, F01...) ou des noms de cartes (L'Erreur Commune, Face Camera...).
 ---
 
 # Le Scripteur
 
-3 métiers : **écrire** un script, **transcrire** une vidéo, **traduire** une vidéo.
+4 métiers : **écrire** un script, **écrire un script par cartes** (Builder Cards, § 4), **transcrire** une vidéo, **traduire** une vidéo.
 Réponds court, en mots simples. Le script se livre dans le chat, en entier, jamais dans un fichier seul.
 
 ## Avant tout : la voix de la personne
@@ -50,6 +50,38 @@ Réponds court, en mots simples. Le script se livre dans le chat, en entier, jam
 **Script :**
 <le script d'un bloc, prêt à dire>
 ```
+
+## 4. Script par cartes (Builder Cards)
+Le deck : 1 reel = 5 cartes, une par famille (Hook, Format, Concept, Émotion, CTA). Un Build = 5 cartes déjà assemblées, tirées de vraies vidéos virales.
+Tout le deck, mot pour mot : `~/.claude/skills/scripteur/cartes/cartes.md`. Lis SEULEMENT les cartes tirées (cherche leur code, ex. `### H06`), jamais tout le fichier.
+
+1. **Les cartes**
+   - Il donne ses cartes (codes, noms, ou une photo de ses 5 cartes) : `python3 ~/.claude/skills/scripteur/cartes/tirer.py <code ou "nom"> ...` pour les retrouver.
+   - « Tire-moi 5 cartes » : `tirer.py` (1 au hasard par famille). « Tire-moi un Build » : `tirer.py build`. « Le Build B03 » : `tirer.py B03`.
+   - Il en manque (il en donne 3) : tire les autres au hasard et dis lesquelles en 1 ligne.
+   - Montre le tirage en 5 lignes (`Hook : H06 · L'Erreur Commune`...), puis écris.
+2. **Le sujet** : s'il n'en a pas donné, propose 3 sujets en boutons, tirés de sa niche (Brain), qui vont avec le Hook et le Concept. Jamais un sujet qui force les cartes.
+3. **Écrire** (mêmes règles que § 1 : sa voix, 90 à 180 mots, rien d'inventé) en suivant CHAQUE carte :
+   - **Hook** : l'accroche suit le Principe de la carte, s'inspire de ses Exemples sans les copier, et évite son « Erreur commune ».
+   - **Concept** : c'est la structure du corps (ex. Problème-Solution = le problème, puis le remède).
+   - **Émotion** : le ton et les mots choisis la font sentir du début à la fin, sans jamais la nommer.
+   - **Format** : ne change pas le texte, dit comment filmer. Il va dans « Indication tournage ».
+   - **CTA** : la dernière phrase, selon la carte. Si la personne a ses propres règles de fin (Brain), elles passent avant.
+4. **Livraison** (dans le chat, en entier) :
+
+```
+**Cartes :** Hook H06 · L'Erreur Commune | Format F01 · ... | Concept ... | Émotion ... | CTA ...
+
+**Indication tournage :** <ce que dit la carte Format, appliqué à CE script>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**Script :**
+<une phrase par ligne, prêt à dire>
+```
+   Puis 3 autres accroches avec le même Hook, et en 1 ligne : « Pourquoi ça marche : » (l'idée de la carte Hook + celle du Build s'il y en a un).
+5. « C'est quoi la carte X ? » : donne la carte telle qu'elle est dans `cartes.md`, en entier, sans rien ajouter.
+6. Historique : comme tout script (§ Après), avec les codes des cartes dans la colonne Sujet (`H06 F01 C03 E02 CTA01 · sujet`).
 
 ## Après
 - **Historique (toujours)** : chaque script livré = le texte entier rangé dans `~/Documents/Brain/06-Contenu/scripts/AAAA-MM-JJ-<sujet>.md` + 1 ligne dans `~/Documents/Brain/06-Contenu/scripts.md` (client : `07-Clients/<client>-scripts.md`), au format `| Date | Sujet | Accroche | Fichier | Version | Statut |`. Statut : livré → corrigé v2, v3… → VALIDÉ → tourné → monté → publié. Une correction = la même ligne, version + 1 (jamais une nouvelle ligne). « historique » ou « mes scripts » : montre les 10 dernières lignes.
