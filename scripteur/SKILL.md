@@ -68,7 +68,7 @@ Tout le deck, mot pour mot : `~/.claude/skills/scripteur/cartes/cartes.md`. Lis 
    - **Concept** : c'est la structure du corps (ex. Problème-Solution = le problème, puis le remède).
    - **Émotion** : le ton et les mots choisis la font sentir du début à la fin, sans jamais la nommer.
    - **Format** : ne change pas le texte, dit comment filmer. « Indication tournage » = le Principe et le Tip de la carte Format, traduits en 2 ou 3 consignes concrètes pour CE script (cadre, décor, où marquer une pause).
-   - **CTA** : la dernière phrase, selon la carte. Si la personne a ses propres règles de fin (Brain), elles passent avant.
+   - **CTA** : la dernière phrase, selon la carte. Rien d'inventé là non plus (contenu de sa vidéo, lien épinglé, cadeau) : seulement ce qu'il a dit. Si la personne a ses propres règles de fin (Brain), elles passent avant.
    - **Serrer avant de livrer** : accroche de 12 mots max, qui dit tout de suite ce que ça coûte ou ce qu'on gagne (du concret, pas « ton plus gros risque »). Aucune phrase qui tire une leçon qu'il n'a pas dite lui-même. Un seul message de fin : la leçon, puis le CTA, jamais la morale répétée entre les deux. Garde ses détails concrets (un nom, un lieu, une phrase entendue) : c'est eux qui font l'émotion.
 4. **Livraison** (dans le chat, en entier) :
 
